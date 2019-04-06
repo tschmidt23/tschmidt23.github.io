@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>CSE 599I: Accelerated Computing - Programming GPUs</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+<style>
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+div#content {
+	padding:			50px;
+	margin-left:		auto;
+	margin-right:		auto;
+	width:			800px;
+	min-height:			420px;
+	background-color:	#ffffff;
+	position:			relative;
+}
+h1 {
+	color:			#80bd01;
+	font-family: 'Lato', sans-serif;
+}
+h2 {
+	color:			#80bd01;
+	font-family: 'Lato', sans-serif;
+}
+h3 {
+	color:			#80bd01;
+	font-family: 'Lato', sans-serif;
+	margin-left:  20px;
+}
+h4 {
+	margin-left:  20px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+	border-bottom: 1px solid #d4d4d4;
+}
+a:hover {
+	color: 			#fb6300;
+}
+table {
+	margin: 20px;
+	margin-left: 40px;
+	border:#ccc 1px solid;
+}
+table tr {
+	text-align: center;
+	padding-left:20px;
+}
+table td {
+	padding: 8px 24px;
+	border: 1px solid #e0e0e0;
+}
+p {
+	margin-left: 40px;
+}
+</style>
+
+</head>
+
+<body>
+  
+<div id="content">
+
+<h2 style="text-align:center"> CSE 599I - Spring 2017 </h2>
+<h1 style="text-align:center"> Accelerated Computing - Programming GPUs </h1>
+
+<center>
+<h4> EEB 037, Mon/Wed 3:00 - 4:20 <br/>
+Instructor: <a href="http://homes.cs.washington.edu/~tws10">Tanner Schmidt</a> <br/>
+Office Hours: Mon 4:30 - 6:00, CSE 674 </h4>
+</center>
+
+<h2> Course Description </h2>
+
+<p>This course is an introduction to accelerated computing using graphics processing units (GPUs). We will be focussing on CUDA programming, but the concepts taught will apply to other GPU frameworks as well. The course will start by covering CUDA syntax extensions and the CUDA runtime API, then move on to more advanced topics such as bandwidth optimization, memory access performance, and floating point considerations. We will learn about common parallel computing patterns such as scans and reductions, and study use cases for GPU acceleration such as matrix multiplication and convolution.</p>
+
+<h3> Prerequisites </h3>
+
+<p>As CUDA is an extension of the C language, students taking this course should be familiar with C programming.</p>
+
+<p>Prior knowledge of computer architecture concepts such as locality of reference will be useful but not required.</p>
+
+<h3> Grading </h3>
+
+<p>Grades for this course will be based on a series of 3-5 programming assignments designed to allow students to apply GPU programming skills taught in the lectures.</p>
+
+<h3> Textbook (Optional) </h3>
+
+<p> <strong>Programming Massively Parallel Processors, Third Edition: A Hands-on Approach</strong> <br/> David B. Kirk and Wen-mei W. Hwu. </p> 
+
+<p> I can provide students with a code for a 30% discount on the textbook from Elsevier. </p>
+
+<h3> Computing Resources </h3>
+
+<p> For the programming assignments, students will need access to a computer with a <a href="https://developer.nvidia.com/cuda-gpus">CUDA-compatible GPU</a>. I can help arrange access to a remote CUDA-capable machine for students without local access. </p>
+
+<h2> Schedule and Slides (subject to change)</h2>
+
+<table cellspacing="0">
+<tr> <td> 3 / 27 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%201.pdf">Course Introduction</a> </td> <td> </td> </tr>
+<tr> <td> 3 / 29 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%202.pdf">Intro to CUDA C</a> </td> <td> <a href="assignments/axpy.tar.gz">axpy</a> </td> </tr>
+<tr> <td> 4 / 3 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%203.pdf">CUDA parallelism model</a> </td> <td> </td> </tr>
+<tr> <td> 4 / 5 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%204.pdf">Memory and data locality</a> <br/>
+<a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%205.pdf">Thread execution / computational efficiency</a> </td> <td> <a href="assignments/TiledMatrixMultiplication.tar.gz">TiledMatrixMultiplication</a> </td> </tr>
+<tr> <td> 4 / 10 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%206.pdf">Memory performance</a> <br/> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%207.pdf">Stencil pattern</a> </td> <td> </td> </tr>
+<tr> <td> 4 / 12 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%208.pdf">Prefix sum pattern</a> </td> <td> </td> </tr>
+<tr> <td> 4 / 17 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%209.pdf">Histogram pattern</a> </td> <td> </td> </tr>
+<tr> <td> 4 / 19 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2010.pdf">Sparse matrix pattern</a> </td> <td> TiledMatrixMultiplication due  </td> </tr>
+<tr> <td> 4 / 24 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2011.pdf">Merge sort pattern</a> </td> <td> <a href="assignment2">Assignment 2</a> </td>  </tr>
+<tr> <td> 4 / 26 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2012.pdf">Graph search pattern</a> </td> <td> </td> </tr>
+<tr> <td> 5 / 1 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2013.pdf">Advanced host / device interface</a> <br/> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2014.pdf">Streams, events, and concurrency</a> </td> <td> </td> </tr>
+<tr> <td> 5 / 3 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2015.pdf">Dynamic parallelism / recursion</a> </td> <td> </td> </tr>
+<tr> <td> 5 / 8 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2016.pdf">Floating point considerations</a> <br />  <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2017.pdf">Intrinsic Functions</a> </td> <td> Assignment 2 due <br /> <a href="finalProject"/>Final project</a> </td> </tr>
+<tr> <td> 5 / 10 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2018.pdf">In-warp shuffles</a> </td> <td> </td> </tr>
+<tr> <td> 5 / 15 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2019.pdf">Multi-GPU programming</a> </td> <td> Final project proposal due </td> </tr>
+<tr> <td> 5 / 17 </td> <td> No class / Go see the <a href="http://dlsys.cs.washington.edu/schedule">CSE 599g</a> <br /> guest lecture on cuDNN instead: <br /> 5/18 1-2pm @CSE305 </td> <td> </td> </tr>
+<tr> <td> 5 / 22 </td> <td> <a href="CSE%20599%20I%20Accelerated%20Computing%20-%20Programming%20GPUs%20Lecture%2020.pdf">OpenCL / OpenACC</a> </td> <td> </td> </tr>
+<tr> <td> 5 / 24 </td> <td> Beyond CUDA </td> <td> </td> </tr>
+<tr> <td> 5 / 29 </td> <td> Memorial Day (no class) </td> <td> </td> </tr>
+<tr> <td> 5 / 31 </td> <td> No class / work on projects </td> <td> </td> </tr>
+<tr> <td> 6 / 1 </td> <td>  </td> <td> Final project due </td> </tr>
+</table>
+
+</div>
+
+</body>
+</html>
